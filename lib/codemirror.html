@@ -1,0 +1,17 @@
+<!--
+  Copyright (c) 2015, DartLab.org. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<!-- import polymer-element's definition -->
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<polymer-element name="code-mirror">
+  <template>
+    <link href="codemirror.css" rel="stylesheet">
+
+    <textarea id="textContainer"></textarea>
+  </template>
+  <script src="../../packages/codemirror/codemirror.js"></script>
+  <script type="application/dart" src="codemirror.dart"></script>
+</polymer-element>

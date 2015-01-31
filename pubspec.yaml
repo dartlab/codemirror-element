@@ -1,0 +1,17 @@
+# Copyright (c) 2015, DartLab.org. All rights reserved. Use of this source code
+# is governed by a BSD-style license that can be found in the LICENSE file.
+
+name: codemirror_element
+version: 0.0.1+4.12.0
+description: Polymer element wrapping the CodeMirror text editor.
+author: DartLab.org
+homepage: https://github.com/dartlab/codemirror-element
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+dependencies:
+  browser: any
+  codemirror: ">=0.1.6+4.12.0 <0.2.0"
+  polymer: '>=0.15.0 <0.16.0'
+transformers:
+- polymer:
+    entry_points: example/simple_example.html

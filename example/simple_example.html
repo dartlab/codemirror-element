@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2015, DartLab.org. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeMirror Element Demo</title>
+
+  <link rel="import" href="packages/polymer/polymer.html">
+  <link rel="import" href="packages/codemirror_element/codemirror.html">
+</head>
+
+<body unresolved>
+  <polymer-element name="simple-example">
+    <template>
+      <div id="controls">
+        <select value="{{theme}}"><option value="3024-day">3024-day</option><option value="3024-night">3024-night</option><option value="ambiance-mobile">ambiance-mobile</option><option value="ambiance">ambiance</option><option value="base16-dark">base16-dark</option><option value="base16-light">base16-light</option><option value="blackboard">blackboard</option><option value="cobalt">cobalt</option><option value="eclipse">eclipse</option><option value="elegant">elegant</option><option value="erlang-dark">erlang-dark</option><option value="lesser-dark">lesser-dark</option><option value="mbo">mbo</option><option value="mdn-like">mdn-like</option><option value="midnight">midnight</option><option value="monokai">monokai</option><option value="neat">neat</option><option value="neo">neo</option><option value="night">night</option><option value="paraiso-dark">paraiso-dark</option><option value="paraiso-light">paraiso-light</option><option value="pastel-on-dark">pastel-on-dark</option><option value="rubyblue">rubyblue</option><option value="solarized">solarized</option><option value="the-matrix">the-matrix</option><option value="tomorrow-night-bright">tomorrow-night-bright</option><option value="tomorrow-night-eighties">tomorrow-night-eighties</option><option value="twilight">twilight</option><option value="vibrant-ink">vibrant-ink</option><option value="xq-dark">xq-dark</option><option value="xq-light">xq-light</option><option value="zenburn">zenburn</option></select>
+        <select value="{{mode}}"><option value="clike">clike</option><option value="css">css</option><option value="dart">dart</option><option value="htmlmixed">htmlmixed</option><option value="javascript">javascript</option><option value="markdown">markdown</option><option value="properties">properties</option><option value="shell">shell</option><option value="xml">xml</option><option value="yaml">yaml</option></select>
+        <input type="checkbox" checked="{{lineNumbers}}">Line numbers
+        <input type="checkbox" checked="{{indentWithTabs}}">Indent with tabs
+        <input type="checkbox" checked="{{autoCloseTags}}">Auto close tags
+      </div>
+    
+      <code-mirror value="{{value}}" mode="{{mode}}" theme="{{theme}}" lineNumbers="{{lineNumbers}}" indentWithTabs="{{indentWithTabs}}" autoCloseTags="{{autoCloseTags}}"></code-mirror>
+  
+      <hr>
+  
+      <div>
+        <textarea rows="10" cols="100" value="{{value}}"></textarea>
+      </div>
+    </template>
+  </polymer-element>
+
+  <simple-example></simple-example>
+
+  <script type="application/dart" src="simple_example.dart"></script>
+</body>
+</html>
