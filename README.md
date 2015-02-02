@@ -1,4 +1,4 @@
-# &lt;code-mirror&gt;
+# \<code-mirror\>
 
 This Polymer element wraps the [CodeMirror text editor](http://codemirror.net).
 
@@ -25,15 +25,15 @@ $ pub get
 
 1. Import Custom Element:
 
-    ```html
-    <link rel="import" href="packages/codemirror_element/codemirror.html">
-    ```
+  ```html
+  <link rel="import" href="packages/codemirror_element/codemirror.html">
+  ```
 
 2. Start using it!
 
-    ```html
-    <code-mirror></code-mirror>
-    ```
+  ```html
+  <code-mirror></code-mirror>
+  ```
 
 ## Options
 
