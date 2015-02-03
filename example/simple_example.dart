@@ -9,7 +9,7 @@ class SimpleExample extends PolymerElement {
 }""";
   @observable bool show = true;
 
-  @observable bool autoCloseTags = true;
+  @observable bool autoCloseTags = false;
   @observable bool indentWithTabs = false;
   @observable bool lineNumbers = true;
   @observable String mode = 'dart';
