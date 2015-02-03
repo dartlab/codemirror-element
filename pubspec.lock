@@ -20,7 +20,7 @@ packages:
   code_transformers:
     description: code_transformers
     source: hosted
-    version: "0.2.3+2"
+    version: "0.2.4"
   codemirror:
     description: codemirror
     source: hosted
@@ -32,7 +32,7 @@ packages:
   csslib:
     description: csslib
     source: hosted
-    version: "0.11.0+2"
+    version: "0.11.0+4"
   html5lib:
     description: html5lib
     source: hosted
@@ -48,7 +48,7 @@ packages:
   observe:
     description: observe
     source: hosted
-    version: "0.12.2"
+    version: "0.12.2+1"
   path:
     description: path
     source: hosted
