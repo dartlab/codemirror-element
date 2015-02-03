@@ -33,7 +33,7 @@ class CodeMirror extends PolymerElement {
         'autoCloseTags': autoCloseTags,
       };
 
-      var textContainer = shadowRoot.querySelector('#textContainer');
+      var textContainer = shadowRoot.querySelector('textarea');
       editor = new cm.CodeMirror.fromTextArea(textContainer, options: options);
       doc = editor.getDoc();
       doc.setValue(value);

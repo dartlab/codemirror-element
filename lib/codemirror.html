@@ -6,11 +6,20 @@
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
 
-<polymer-element name="code-mirror">
+<polymer-element name="code-mirror" vertical layout relative>
   <template>
     <link href="codemirror.css" rel="stylesheet">
+    <style>
+      .CodeMirror {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
 
-    <textarea id="textContainer"></textarea>
+    <textarea></textarea>
   </template>
   <script src="../../packages/codemirror/codemirror.js"></script>
   <script type="application/dart" src="codemirror.dart"></script>
