@@ -36,12 +36,13 @@ class CodeMirror extends PolymerElement {
       var textContainer = shadowRoot.querySelector('#textContainer');
       editor = new cm.CodeMirror.fromTextArea(textContainer, options: options);
       doc = editor.getDoc();
+      doc.setValue(value);
       doc.onChange.listen((data) => value = doc.getValue());
     }
   }
 
   valueChanged(_, String value) {
-    if (doc.getValue() != value) {
+    if (doc != null && doc.getValue() != value) {
       doc.setValue(value);
     }
   }
@@ -51,6 +52,6 @@ class CodeMirror extends PolymerElement {
   lineNumbersChanged(_, bool value) => editor.setOption('lineNumbers', value);
   modeChanged(_, String value) => editor.setOption('mode', value);
   themeChanged(_, String value) => editor.setOption('theme', value);
-  
+
   focus() => editor.focus();
 }
