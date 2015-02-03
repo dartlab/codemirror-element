@@ -1,5 +1,7 @@
 # \<code-mirror\>
 
+[![Build Status](https://drone.io/github.com/dartlab/codemirror-element/status.png)](https://drone.io/github.com/dartlab/codemirror-element/latest)
+
 This Polymer element wraps the [CodeMirror text editor](http://codemirror.net).
 
 ## Demo
