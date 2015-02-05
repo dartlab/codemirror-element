@@ -7,7 +7,7 @@ import 'package:codemirror/codemirror.dart' as cm;
 
 @CustomTag('code-mirror')
 class CodeMirror extends PolymerElement {
-  @PublishedProperty(reflect: true) String value;
+  @published String value;
 
   @published bool autoCloseTags;
   @published bool indentWithTabs;
