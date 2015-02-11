@@ -7,7 +7,6 @@ class SimpleExample extends PolymerElement {
   var who = 'World';
   print('Hello $who!');
 }""";
-  @observable bool show = true;
 
   @observable bool autoCloseTags = false;
   @observable bool indentWithTabs = false;

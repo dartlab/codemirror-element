@@ -7,13 +7,13 @@ import 'package:codemirror/codemirror.dart' as cm;
 
 @CustomTag('code-mirror')
 class CodeMirror extends PolymerElement {
-  @published String value;
+  @published String value = '';
 
-  @published bool autoCloseTags;
-  @published bool indentWithTabs;
-  @published bool lineNumbers;
-  @published String mode;
-  @published String theme;
+  @published bool autoCloseTags = false;
+  @published bool indentWithTabs = false;
+  @published bool lineNumbers = false;
+  @published String mode = '';
+  @published String theme = '';
 
   cm.CodeMirror editor;
   cm.Doc doc;
@@ -43,15 +43,17 @@ class CodeMirror extends PolymerElement {
 
   valueChanged(_, String value) {
     if (doc != null && doc.getValue() != value) {
-      doc.setValue(value);
+      doc.setValue(ifNull(value, ''));
     }
   }
 
-  autoCloseTagsChanged(_, bool value) => editor.setOption('autoCloseTags', value);
-  indentWithTabsChanged(_, bool value) => editor.setOption('indentWithTabs', value);
-  lineNumbersChanged(_, bool value) => editor.setOption('lineNumbers', value);
-  modeChanged(_, String value) => editor.setOption('mode', value);
-  themeChanged(_, String value) => editor.setOption('theme', value);
+  autoCloseTagsChanged(_, bool value) => editor.setOption('autoCloseTags', ifNull(value, false));
+  indentWithTabsChanged(_, bool value) => editor.setOption('indentWithTabs', ifNull(value, false));
+  lineNumbersChanged(_, bool value) => editor.setOption('lineNumbers', ifNull(value, false));
+  modeChanged(_, String value) => editor.setOption('mode', ifNull(value, ''));
+  themeChanged(_, String value) => editor.setOption('theme', ifNull(value, ''));
 
   focus() => editor.focus();
 }
+
+ifNull(value, defaultValue) => value != null ? value : defaultValue;

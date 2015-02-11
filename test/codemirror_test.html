@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2015, DartLab.org. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+  <head>
+    <title>code-mirror</title>
+    <link rel="import" href="packages/codemirror_element/codemirror.html">
+  </head>
+  <body unresolved>
+    <code-mirror id="default"></code-mirror>
+    <code-mirror id="value" value="Some content"></code-mirror>
+    <code-mirror id="mode" mode="dart"></code-mirror>
+    <code-mirror id="theme" theme="monokai"></code-mirror>
+    <code-mirror id="lineNumbers" lineNumbers="true"></code-mirror>
+    <code-mirror id="indentWithTabs" indentWithTabs="true"></code-mirror>
+    <code-mirror id="autoCloseTags" autoCloseTags="true"></code-mirror>
+
+    <!-- bind value -->
+    <template id="bind-value-template" is="auto-binding-dart">
+      <code-mirror id="bind-value-editor"
+        value="{{value}}" 
+        mode="{{mode}}" 
+        theme="{{theme}}" 
+        lineNumbers="{{lineNumbers}}" 
+        indentWithTabs="{{indentWithTabs}}" 
+        autoCloseTags="{{autoCloseTags}}"></code-mirror>
+    </template>
+    
+    <script type="application/dart" src="codemirror_test.dart"></script>
+  </body>
+</html>

@@ -45,6 +45,10 @@ packages:
     description: logging
     source: hosted
     version: "0.9.3"
+  matcher:
+    description: matcher
+    source: hosted
+    version: "0.11.4+1"
   observe:
     description: observe
     source: hosted
@@ -89,6 +93,10 @@ packages:
     description: template_binding
     source: hosted
     version: "0.14.0"
+  unittest:
+    description: unittest
+    source: hosted
+    version: "0.11.5+2"
   utf:
     description: utf
     source: hosted
