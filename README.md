@@ -25,17 +25,17 @@ $ pub get
 
 ## Usage
 
-1. Import Custom Element:
+Import Custom Element:
 
-  ```html
-  <link rel="import" href="packages/codemirror_element/codemirror.html">
-  ```
+```html
+<link rel="import" href="packages/codemirror_element/codemirror.html">
+```
 
-2. Start using it!
+Start using it!
 
-  ```html
-  <code-mirror></code-mirror>
-  ```
+```html
+<code-mirror></code-mirror>
+```
 
 ## Options
 
