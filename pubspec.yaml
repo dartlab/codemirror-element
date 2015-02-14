@@ -1,5 +1,5 @@
 name: codemirror_element
-version: 0.0.3+4.12.0
+version: 0.0.4+4.12.0
 author: DartLab.org <pub@dartlab.org>
 description: Polymer element wrapping the CodeMirror text editor.
 homepage: https://github.com/dartlab/codemirror-element
@@ -10,6 +10,7 @@ dependencies:
   codemirror: '>=0.1.6+4.12.0 <0.2.0'
   polymer: '>=0.15.0 <0.16.0'
 dev_dependencies:
+  core_elements: '>=0.6.0 <0.7.0'
   unittest: any
 transformers:
 - polymer:

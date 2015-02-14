@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.4
+
+- Add refresh method.
+
+## 0.0.3
+
+- Add tests.
+- Fix other null reference bugs.
+
 ## 0.0.2
 
 - Autoresize element.

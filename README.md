@@ -53,6 +53,7 @@ Attribute     | Options     | Default      | Description
 Method        | Parameters   | Returns     | Description
 ---           | ---          | ---         | ---
 `focus()`     | None.        | Nothing.    | Give the editor focus.
+`refresh()`   | None.        | Nothing.    | Ensure CodeMirror is still looking as intended.
 
 ## Contributing
 

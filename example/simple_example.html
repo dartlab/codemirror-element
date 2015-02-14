@@ -12,6 +12,7 @@
   <title>CodeMirror Element Demo</title>
 
   <link rel="import" href="packages/polymer/polymer.html">
+  <link rel="import" href="packages/core_elements/core_splitter.html">
   <link rel="import" href="packages/codemirror_element/codemirror.html">
 </head>
 
@@ -20,7 +21,7 @@
     <template>
       <style>
         textarea {
-          width: 99%;
+          width: 100%;
         }
       </style>
       <div id="controls">
@@ -30,13 +31,15 @@
         <input type="checkbox" checked="{{indentWithTabs}}">Indent with tabs
         <input type="checkbox" checked="{{autoCloseTags}}">Auto close tags
       </div>
-    
-      <code-mirror flex value="{{value}}" mode="{{mode}}" theme="{{theme}}" lineNumbers="{{lineNumbers}}" indentWithTabs="{{indentWithTabs}}" autoCloseTags="{{autoCloseTags}}"></code-mirror>
   
-      <hr>
+      <div vertical layout flex>
+        <code-mirror flex value="{{value}}" mode="{{mode}}" theme="{{theme}}" lineNumbers="{{lineNumbers}}" indentWithTabs="{{indentWithTabs}}" autoCloseTags="{{autoCloseTags}}"></code-mirror>
+      </div>  
   
-      <div>
-        <textarea rows="10" value="{{value}}"></textarea>
+      <core-splitter on-track="{{resize}}" direction="down" minSize="150px"></core-splitter>
+  
+      <div layout relative>
+        <textarea value="{{value}}" fit></textarea>
       </div>
     </template>
   </polymer-element>

@@ -18,9 +18,8 @@ class CodeMirror extends PolymerElement {
   cm.CodeMirror editor;
   cm.Doc doc;
 
-  /// Constructor used to create instance of MainApp.
-  CodeMirror.created() : super.created() {
-  }
+  /// Constructor used to create instance of CodeMirror.
+  CodeMirror.created() : super.created();
 
   /// Called when an instance of main-app is inserted into the DOM.
   attached() {
@@ -54,6 +53,7 @@ class CodeMirror extends PolymerElement {
   themeChanged(_, String value) => editor.setOption('theme', ifNull(value, ''));
 
   focus() => editor.focus();
+  refresh() => editor.refresh();
 }
 
 ifNull(value, defaultValue) => value != null ? value : defaultValue;
