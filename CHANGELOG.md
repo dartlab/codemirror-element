@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.0
+
+- Upgrade to Codemirror 5.0.0.
+
 ## 0.0.4
 
 - Add refresh method.
