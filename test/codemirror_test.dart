@@ -34,7 +34,7 @@ class MyModel extends Object with Observable {
 void main() {
   useHtmlConfiguration();
 
-  initPolymer().run(() {
+  initPolymer().then((zone) => zone.run(() {
     return Polymer.onReady.then((_) {
       group('core-mirror', () {
         test('default values', () {
@@ -49,12 +49,12 @@ void main() {
         });
 
         var attributesTest = {
-          "value": "Some content",
-          "mode": "dart",
-          "theme": "monokai",
-          "lineNumbers": true,
-          "indentWithTabs": true,
-          "autoCloseTags": true,
+          "value": "Some content", //
+          "mode": "dart", //
+          "theme": "monokai", //
+          "lineNumbers": true, //
+          "indentWithTabs": true, //
+          "autoCloseTags": true, //
         };
 
         attributesTest.forEach((attribute, value) {
@@ -135,7 +135,7 @@ void main() {
         });
       });
     });
-  });
+  }));
 }
 
 Future flushLayoutAndRender() {
