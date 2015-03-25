@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Upgrade to Codemirror 5.1.0.
+
 ## 0.1.0
 
 - Upgrade to Codemirror 5.0.0.
